@@ -241,12 +241,12 @@
     // Attendi che il documento sia completamente caricato
     document.addEventListener('DOMContentLoaded', function() {
         // Ottieni il riferimento al bottone
-        var scrollButton = document.getElementById('scroll-button-right');
+        var scrollButtonRight = document.getElementById('scroll-button-right');
 
         // Verifica che il bottone esista
-        if (scrollButton) {
+        if (scrollButtonRight) {
             // Aggiungi l'evento di click al bottone
-            scrollButton.addEventListener('click', function() {
+            scrollButtonRight.addEventListener('click', function() {
                 // Ottieni il riferimento a nav-main
                 var navMain = document.getElementById('nav-main');
 
@@ -282,6 +282,8 @@
 
         var navMain = document.getElementById('nav-main');
 
+
+
         if (scrollButtonLeft && navMain) {
             // Nascondi il bottone all'inizio
             scrollButtonLeft.style.display = 'none';
@@ -294,15 +296,16 @@
             // Aggiungi un evento di scroll a nav-main
             navMain.addEventListener('scroll', function () {
                 // Se nav-main è scrollato a destra, mostra il bottone
-                if (navMain.scrollLeft > 0) {
-                    scrollButtonLeft.style.display = 'block';
-                } else {
-                    // Altrimenti, nascondi il bottone
-                    scrollButtonLeft.style.display = 'none';
+                if (window.innerWidth > 500){
+                    if (navMain.scrollLeft > 0) {
+                        scrollButtonLeft.style.display = 'block';
+                    } else {
+                        // Altrimenti, nascondi il bottone
+                        scrollButtonLeft.style.display = 'none';
+                    }
                 }
             });
         }
-        ;
     });
 
 
