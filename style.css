@@ -92,7 +92,7 @@ header a{
 }
 #nav-content {
     flex-direction: row;
-    flex: 1;
+    display: flex;
     justify-content: space-between;
     font-size: small;
 }
@@ -113,23 +113,19 @@ header a{
 }
 
 
-.nav-links {
+.scroll-container {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    align-items: stretch;
+    overflow-x: auto;
 }
 
-.nav-links  * {
+.scroll-container  * {
     margin-right: 10px;
     margin-left: 10px;
     flex:0 0 auto;
     color: #F1EFED;
-}
-
-#nav-main {
-    justify-content: flex-start;
-    align-items: stretch;
-    overflow-x: auto;
 }
 
 .scroll-button {
@@ -138,11 +134,11 @@ header a{
     margin: 3px;
 }
 
-#scroll-button:focus {
+.scroll-button:focus {
     outline: none;
 }
 
-#nav-main::-webkit-scrollbar{
+::-webkit-scrollbar{
     display: none;
 }
 
@@ -270,6 +266,41 @@ article img{
 
 
 
+
+#stories {
+    width: 100%;
+    background-color: #1F1E1C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+#stories::-webkit-scrollbar{
+    display: none;
+}
+
+
+.stories-element{
+    flex: 0 0 20%;
+    margin: 8px;
+    position: relative;
+    background-image: url("https://placehold.co/600x400/orange/white");
+    background-size: cover;
+    justify-self: stretch;
+    overflow-x: auto;
+    background-position: center center;
+
+}
+
+.stories-element > span {
+    margin: 2px;
+    font-weight: bolder;
+    font-size: 10px;
+    justify-self: flex-end;
+
+}
 
 
 #footer-content {

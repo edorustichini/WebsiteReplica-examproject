@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROVA: DER SPIEGEL | ONLINE</title>
+    <title>ELABORATO: DER SPIEGEL | ONLINE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <script src="https://kit.fontawesome.com/02696be5fe.js" crossorigin="anonymous"></script>
@@ -34,11 +34,10 @@
     <div class="main-style flex-center" id="nav-content">
         <div id="nav-menu">Menu</div>
 
-        <i id="scroll-button-left" class='scroll-button fas fa-angle-left' style="font-weight: bold; color: #F1EFED;"></i>
-        <section class="nav-links" id="nav-main">
+        <i class='scroll-button  scroll-button-left fas fa-angle-left' style="font-weight: bold; color: #F1EFED;"></i>
+        <section class="scroll-container" id="nav-main">
             <nav>
                 <a href="#" style="">Link 1</a>
-                <span class="news-divisor" style="height: 1rlh"></span>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
                 <a href="#">Link 4</a>
@@ -55,9 +54,19 @@
                 <a href="#">Link 15</a>
                 <a href="#">Link 16</a>
                 <a href="#">Link 17</a>
+                <a href="#">Link 8</a>
+                <a href="#">Link 9</a>
+                <a href="#">Link 10</a>
+                <a href="#">Link 11</a>
+                <a href="#">Link 12</a>
+                <a href="#">Link 13</a>
+                <a href="#">Link 14</a>
+                <a href="#">Link 15</a>
+                <a href="#">Link 16</a>
+                <a href="#">Link 17</a>
             </nav>
         </section>
-            <i id="scroll-button-right" class='scroll-button fas fa-angle-right' style="font-weight: bold; color: #F1EFED "></i>
+        <i  class='scroll-button scroll-button-right fas fa-angle-right' style="font-weight: bold; color: #F1EFED "></i>
         <a href="#" id="nav-search" class='fas fa-search'></a>
     </div>
 </section>
@@ -158,10 +167,7 @@
 
 
 
-    <!--Stories-->
-    <section class="main-style"  style="background-color: aqua" id="stories">
-        <h1>STORIES</h1>
-    </section>
+  >
 
 
     <!-- Galleria immagini -->
@@ -170,6 +176,59 @@
             <img src="" alt="Immagine 1" >
         </div>
     </section>
+
+
+    <!-- Sezione Stories -->
+    <section >
+        <div class="main-style flex-center" style="flex-direction: row; display: flex; justify-content: space-between">
+            <div id="stories">
+
+                <i class='scroll-button  scroll-button-left fas fa-angle-left' style="font-weight: bold; color: #F1EFED;"></i>
+                <section class="scroll-container">
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Titolo  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Titolo  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Titolo  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Titolo  </span>
+                    </div>
+                    <div class="stories-element">
+                        <span>Titolo  </span>
+                    </div>
+                </section>
+                <i  class='scroll-button scroll-button-right fas fa-angle-right' style="font-weight: bold; color: #F1EFED "></i>
+            </div>
+        </div>
+    </section>
+
+
+
 
 
 
@@ -183,7 +242,7 @@
 <footer>
     <div id="footer-content">
         <div class="main-style flex-center" style="border-bottom:1px dotted white">
-            <nav class="nav-links">
+            <nav class="scroll-container">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
@@ -237,77 +296,33 @@
     })
 </script>
 <script>
-
-    // Attendi che il documento sia completamente caricato
     document.addEventListener('DOMContentLoaded', function() {
-        // Ottieni il riferimento al bottone
-        var scrollButtonRight = document.getElementById('scroll-button-right');
+        var scrollButtonsRight = document.querySelectorAll('.scroll-button-right');
+        var scrollButtonsLeft = document.querySelectorAll('.scroll-button-left');
+        var scrollContainers = document.querySelectorAll('.scroll-container');
 
-        // Verifica che il bottone esista
-        if (scrollButtonRight) {
-            // Aggiungi l'evento di click al bottone
-            scrollButtonRight.addEventListener('click', function() {
-                // Ottieni il riferimento a nav-main
-                var navMain = document.getElementById('nav-main');
-
-                // Verifica che nav-main esista
-                if (navMain) {
-                    // Aumenta il valore di scrollLeft di 100
-                    navMain.scrollLeft += 50;
-                }
+        scrollButtonsRight.forEach((button, index) => {
+            button.addEventListener('click', function() {
+                scrollContainers[index].scrollLeft += 50;
             });
-        }
-    });
-</script>
+        });
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var scrollButtonLeft = document.getElementById('scroll-button-left');
-
-        if (scrollButtonLeft) {
-            scrollButtonLeft.addEventListener('click', function() {
-                var navMain = document.getElementById('nav-main');
-
-                if (navMain) {
-                    navMain.scrollLeft -= 50; // diminuisce il valore di scrollLeft
-                }
+        scrollButtonsLeft.forEach((button, index) => {
+            button.style.display = 'none';
+            button.addEventListener('click', function() {
+                scrollContainers[index].scrollLeft -= 50;
             });
-        }
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var scrollButtonLeft = document.getElementById('scroll-button-left');
-
-        var navMain = document.getElementById('nav-main');
-
-
-
-        if (scrollButtonLeft && navMain) {
-            // Nascondi il bottone all'inizio
-            scrollButtonLeft.style.display = 'none';
-
-            // Aggiungi l'evento di click al bottone
-            scrollButtonLeft.addEventListener('click', function () {
-                navMain.scrollLeft -= 100; // diminuisce il valore di scrollLeft
-            });
-
-            // Aggiungi un evento di scroll a nav-main
-            navMain.addEventListener('scroll', function () {
-                // Se nav-main è scrollato a destra, mostra il bottone
+            scrollContainers[index].addEventListener('scroll', function () {
                 if (window.innerWidth > 500){
-                    if (navMain.scrollLeft > 0) {
-                        scrollButtonLeft.style.display = 'block';
+                    if (scrollContainers[index].scrollLeft > 0) {
+                        button.style.display = 'block';
                     } else {
-                        // Altrimenti, nascondi il bottone
-                        scrollButtonLeft.style.display = 'none';
+                        button.style.display = 'none';
                     }
                 }
             });
-        }
+        });
     });
-
 
 </script>
 
