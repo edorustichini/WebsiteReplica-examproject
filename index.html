@@ -71,8 +71,8 @@
 <main style="flex-direction: column">
 
     <!--Sezione recent News: visibili 3 notizione-->
-    <section style="background-color: #1F1E1C; align-self: stretch">
-        <div class="main-style flex-center" id="rn-content">
+    <section  style="background-color: #1F1E1C; align-self: stretch">
+        <div class="main-style" id="rn-content">
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
                 <footer class="publication-time">2 min fa</footer>
@@ -101,7 +101,7 @@
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">2 min</footer>
             </div>
-            <img src="" alt="Immagine principale">
+            <img src="https://picsum.photos/780/430" alt="Immagine principale">
 
         </article>
         <article class="big-img">
@@ -111,13 +111,15 @@
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">2 min</footer>
             </div>
-            <img src="" alt="Immagine principale">
+            <img src="https://picsum.photos/640/360" alt="Immagine principale">
         </article>
         <article class="small-article"> <div>
-            <h6 class="small-title">Di cosa si parla nell'articolo</h6>
-            <div style="flex-direction: row">
-                <h1>Articolo Scrittore</h1>
-                <img src="https://placehold.co/100x100/orange/white"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
+            <div style="display: flex; align-items: center">
+                <div style="margin-right: 30px">
+                    <p class="small-title">Di cosa si parla nell'articolo</p>
+                    <h1>Articolo ScAArittore</h1>
+                </div>
+                <img src="https://picsum.photos/100"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
             </div>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
             <footer class="publication-time">2 min</footer>
@@ -130,46 +132,79 @@
                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                <footer class="publication-time">2 min</footer>
            </div>
-           <img src="0" alt="Immagine principale">
+           <img src="https://picsum.photos/488/274" alt="Immagine principale">
          </article>
     </section>
 
 
     <!-- Gruppo di articoli -->
-    <section class="main-style articles-group">
-        <h1>GRUPPO DI ARTICOLI</h1>
-        <article class="small-article"> <div>
-            <h6 class="small-title">Di cosa si parla nell'articolo</h6>
-            <div style="flex-direction: row">
-                <h1>Articolo senza immagine</h1>
-                <img src="0" alt="Foto scrittore">
+    <section class="main-style" id="articles-group" style="background-color: #1F1E1C">
+       <article class="small-article"> <div>
+            <div style="display: flex; align-items: center">
+                <div style="margin-right: 30px">
+                    <p class="small-title">Di cosa si parla nell'articolo</p>
+                    <h1>Articolo ScAArittore</h1>
+                </div>
+                <img src="https://picsum.photos/100"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
             </div>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
             <footer class="publication-time">2 min</footer>
         </div>
         </article>
-        <article>
-            <div>
-                <h6 class="small-title">Di cosa si parla nell'articolo</h6>
-                <h1>Titolone</h1>
-                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                <footer class="publication-time">2 min</footer>
-            </div>
-            <img src="0" alt="Immagine principale">
-        </article>
+       <article>
+           <div>
+               <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+               <h1>Titolone</h1>
+               <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+               <footer class="publication-time">2 min</footer>
+           </div>
+           <img src="https://picsum.photos/488/274" alt="Immagine principale">
+         </article>
+
+        <div id="sub-group">
+            <article>
+                    <div>
+                        <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+                        <h1>Titolone</h1>
+                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                        <footer class="publication-time">2 min</footer>
+                    </div>
+                    <img src="https://picsum.photos/488/274" alt="Immagine principale">
+            </article>
+            <article>
+                    <div>
+                        <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+                        <h1>Titolone</h1>
+                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                        <footer class="publication-time">2 min</footer>
+                    </div>
+                    <img src="https://picsum.photos/488/274" alt="Immagine principale">
+            </article>
+
+            <article>
+                    <div>
+                        <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+                        <h1>Titolone</h1>
+                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                        <footer class="publication-time">2 min</footer>
+                    </div>
+                    <img src="https://picsum.photos/488/274" alt="Immagine principale">
+            </article>
+        </div>
+
     </section>
 
-
-    <!-- Galleria immagini -->
-    <section class="main-style flex-center" id="galleria-immagini">
-
+    <!-- Rubrica -->
+    <section>
+        <div>
+        </div>
     </section>
 
 
     <!-- Sezione Stories -->
-    <section >
-        <div style="position: relative" class="main-style">
-            <div id="stories">
+    <section class="main-style" id="stories">
+            <header>STORIES</header>
+            <div id="stories-content">
                 <i class='scroll-button  scroll-button-left fas fa-angle-left'></i>
                 <section class="scroll-container">
                     <div>
@@ -201,16 +236,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-    <section id="rcn2">
-    </section>
-
 
 </main>
 
