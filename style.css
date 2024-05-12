@@ -1,17 +1,11 @@
 body {
-    margin: 0 auto;
+    margin: 0 0;
     background-color: black;
     font-family:  Arial, sans-serif;
     color: white;
-    overflow-x: hidden;
     transition: all 1s ease;
 }
-html {
-    scroll-behavior: smooth;
-}
- * {
-    box-sizing: border-box;
-}
+
 
 
 
@@ -35,6 +29,33 @@ html {
     color: #F1EFED;
 }
 
+
+.scroll-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    overflow-x: auto;
+}
+.scroll-container  * {
+    flex:0 0 auto;
+    color: #F1EFED;
+}
+
+.scroll-button {
+    align-self: center;
+    display: inline-block;
+    background-color: #1F1E1C;
+}
+
+.scroll-button:focus {
+    outline: none;
+}
+
+.scroll-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* TODO
 .tooltip .tooltiptext{
     visibility: hidden;
     background-color: black;
@@ -45,13 +66,13 @@ html {
 .tooltip:hover .tooltiptext{
     visibility: visible;
 }
+*/
 
 /* Stili per l'header */
 #main-header {
     position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+
     background-color: #D03D12;
     display: flex;
     padding: 20px;
@@ -63,6 +84,39 @@ html {
     text-decoration: none;
 }
 
+#header-logo {
+    float: left;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#header-menu-symbol {
+    display: none;
+    transition: display 1s;
+}
+
+
+.header-links {
+    font-size: 13px;
+    float: right;
+    padding: 10px;
+}
+
+#link-iscrizione b{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+#reg-button{
+    background-color: white;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+
+#reg-button > *{
+    color: #D03D12;
+}
+
+
 /*  Quando scroll down */
 .header-small {
     padding: 5px;
@@ -70,67 +124,33 @@ html {
 }
 
 
-#header-logo {
-    float: left;
-    font-size: 35px;
-    font-weight: bold;
-    text-decoration: none;
-}
 
-.header-links {
-    position: relative;
-    font-size: 13px;
-    float: right;
-    padding: 10px;
-}
-
-#link-abbonamento *{
-    text-decoration: underline;
-    text-underline-offset: 4px;
-
-
-}
-#reg-button{
-    background-color: white;
-    margin: 0 5px;
-}
-
-#reg-button > * {
-    color: #D03D12;
-}
-
+/* Barra di Navigazione */
 #navigation-bar {
-    margin-bottom: 1px;
-    padding-top: 12px;
-    padding-bottom: 15px;
+    margin-bottom: 2px;
+    padding-top: 10px;
+    padding-bottom: 13px;
     font-size: small;
     background-color: #1F1E1C;
     color: #F1EFED;
 }
 
-#navigation-bar * {
-    align-items: center;
-}
 
-#navigation-bar nav{
-    display: flex;
-    justify-content: space-between;
-}
 #navigation-bar a {
     color: #F1EFED;
     text-decoration: none;
 }
 
+#navigation-bar i {
+    font-weight: bold;
+    color: #F1EFED
+}
+
 #nav-menu {
     display: flex;
     justify-self: start;
-    border-right: 1px dashed;
-    padding-right: 8px;
-    margin-top: 2px;
-}
-
-#nav-menu > * {
-    margin-right: 10px;
+    flex-direction: row;
+    align-items: center;
 }
 
 #nav-search {
@@ -141,57 +161,30 @@ html {
     padding-left: 8px;
 }
 
-.scroll-container {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: stretch;
-    overflow-x: auto;
-}
 
-nav ul {
+
+#navigation-bar nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
+#navigation-bar nav li {
     display: inline;
-    margin-right: 6px;
+    padding: 0 6px;
+    margin-right: 4px;
+
 }
 
-.scroll-container  * {
-    margin-right: 10px;
-    margin-left: 10px;
-    flex:0 0 auto;
-    color: #F1EFED;
-}
 
-.scroll-button {
-    align-self: center;
-    display: inline-block;
-    background-color: #1F1E1C;
-}
 
 #navigation-bar .scroll-button {
     padding-left: 5px;
     padding-right: 5px;
 }
 
-
-
-.scroll-button:focus {
-    outline: none;
-}
-
-.scroll-container::-webkit-scrollbar{
-    display: none;
-}
-
 #nav-main {
-    padding-right: 3px;
-    padding-left: 3px;
-    margin: 2px;
+    padding: 0 3px;
 }
 
 #navigation-bar .scroll-container a:hover {
@@ -209,8 +202,7 @@ nav li {
     display: flex;
     flex-direction: row;
     flex:1;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: space-around;
     padding: 1px;
     color: #F1EFED;
 }
@@ -220,7 +212,6 @@ nav li {
     flex-direction: column;
     padding:10px 16px;
     flex: 0 0 30%;
-    height: 100%;
     font-weight: bolder;
     font-size: 14px;
 }
@@ -241,22 +232,19 @@ nav li {
 /* Classe articoli */
 article {
     display: flex;
-    background-color: #1F1E1C;
     flex-direction: row;
+    background-color: #1F1E1C;
     padding: 16px 24px;
     margin: 15px 0;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
+/*TODO DA RIVEDERE */
 article img{
-    background-color: #1F1E1C;
     max-width: 100%;
-    height: auto;
+    background-color: #1F1E1C;
 }
-
-
-
-
+/*Todo da rivedere */
 /* Articoli con immagine più grande */
 article.big-img > img {
     flex: 2;
@@ -271,7 +259,6 @@ article p {
     font-size: 16px;
 }
 
-
 #front-article {
     flex-direction: column-reverse;
 }
@@ -280,7 +267,6 @@ article p {
 .small-article {
     display: flex;
     flex-direction: column;
-    padding: 16px 25px;
     background-color: #1F1E1C;
 }
 
@@ -296,7 +282,7 @@ article p {
     border-radius: 8px;
 }
 
-#articles-group > article {
+#articles-group > * {
     padding: 5px 0;
     border-radius: 0;
     border-bottom: 1px solid #cecece;
@@ -304,25 +290,24 @@ article p {
 
 
 #sub-group {
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    border-bottom: none;
 }
 
-#sub-group > article {
-    flex: 1;
+#sub-group > * {
     display: flex;
+    flex: 1 1 30%;
     flex-direction: column-reverse;
     padding: 8px 13px;
     border-right: 1px solid #cecece;
 }
 
+
 #stories {
     margin-top: 15px;
     margin-bottom: 15px;
-}
-
-#stories {
     border-radius: 5px;
     padding-top: 10px;
     background-color: #1F1E1C;
@@ -331,7 +316,7 @@ article p {
 
 #stories header {
     color: #D03D12;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bolder;
     padding-left: 10px;
 }
@@ -387,7 +372,6 @@ article p {
     z-index: 5;
 }
 
-/* TODO DA RISCRIVERE/RIVEDERE */
 #stories-content .scroll-button-left {
     position: absolute;
     left: 3%;
@@ -399,13 +383,6 @@ article p {
     position: absolute;
     right: 3%;
     top: 50%;
-    transform: translateY(-50%);
-}
-
-
-#stories-title{
-    position: absolute;
-
 }
 
 #stories-content .scroll-container  p{
@@ -418,31 +395,52 @@ article p {
 
 }
 
-i {
-    cursor: pointer;
-}
 
 #footer-content {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 25px;
     background-color: #2F2D2B;
 }
 
 #footer-content nav {
     display: flex;
     flex-direction: row;
-    flex: 1;
     justify-content: space-between;
-    padding-bottom: 10px;
+
+    align-items: flex-start;
+    overflow: auto;
+    padding: 16px 24px;
 }
 #footer-content a {
+    font-size: 13px;
+    color: #BBB9B7;
+    white-space: nowrap;
     text-decoration: none;
+    margin: 0 6px;
 }
 
-img {
-    justify-self: center;
+#footer-content a:hover {
+    color: #F1EFED;
 }
 
-@media screen and (max-width: 500px) {
+
+#footer-content header {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    color: #F1EFED;
+}
+
+* {
+    box-sizing: border-box;
+}
+i {
+    cursor: pointer;
+}
+@media screen and (max-width: 980px) {
     .main-style {
         width: 100%;
     }
@@ -501,15 +499,46 @@ img {
         margin: 0 0;
     }
 
-    img {
-        width: 100%;
-        height: auto;
+
+
+    #header-buttons {
+        display: none;
     }
 
-    #link-abbonamento {
+
+}
+
+
+@media screen and (max-width: 710px) {
+    .main-style {
+        width: 550px
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .main-style {
+        width: 100%;
+    }
+
+    * h1 {
+        font-size: 24px;
+    }
+
+    #nav-menu, #nav-search {
         display: none;
     }
-    #reg-button {
-        display: none;
+
+    #footer-content nav {
+        flex-wrap: wrap;
+        padding: 8px 0;
+        > a {
+            margin: 3px 0;
+        }
     }
+
+    #footer-content header {
+        align-self: flex-start;
+    }
+
 }

@@ -16,14 +16,13 @@
 <header  id="main-header">
     <div class="main-style">
         <div id="header-logo">
-            <i class="fa-solid fa-bars" style="display: none; transition: display 1s" id="menu-symbol"></i>
+            <i class="fa-solid fa-bars"  id="header-menu-symbol"></i>
             <a  href="#">DER SPIEGEL</a>
         </div>
-        <div>
-            <a class="header-links" id="reg-button" href="#"><b>Anmelden </b><i class='fas fa-angle-right' style="font-weight: bold"></i></a>
-            <a class="header-links" id="link-abbonamento" href="#"><b>Abonnement</b></a>
+        <div id="header-buttons">
+            <a class="header-links" id="reg-button" href="#"><b>Registrati </b><i class='fas fa-angle-right' style="font-weight: bold; font-size: smaller"></i></a>
+            <a class="header-links" id="link-iscrizione" href="#"><b>Sottoiscrizione</b></a>
         </div>
-
     </div>
 </header>
 
@@ -32,14 +31,14 @@
 <section  id="navigation-bar">
     <div class="main-style flex-center">
         <a href="#" id="nav-menu">
-            <i class="fa-solid fa-bars"></i>
-            Menu
+            <i class="fa-solid fa-bars" style="padding-right: 2px;"></i>
+            <p style="padding-right: 8px; border-right: 1px dashed #F1EFED">Menu</p>
         </a>
 
-        <i class='scroll-button  scroll-button-left fas fa-angle-left' style="font-weight: bold; color: #F1EFED;"></i>
+        <i class='scroll-button  scroll-button-left fas fa-angle-left'></i>
         <nav class="scroll-container">
             <ul>
-                <li style="padding-right: 5px; border-right: 1px dotted white"><a href="#" >Link 1</a></li>
+                <li style="padding: 0 16px; border-right: 1px dotted white"><a href="#" >Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
                 <li><a href="#">Link 4</a></li>
@@ -61,7 +60,7 @@
                 <li><a href="#">Link 20</a></li>
             </ul>
         </nav>
-        <i  class='scroll-button scroll-button-right fas fa-angle-right' style="font-weight: bold; color: #F1EFED "></i>
+        <i  class='scroll-button scroll-button-right fas fa-angle-right'></i>
         <a href="#" id="nav-search" class='fas fa-search'></a>
     </div>
 </section>
@@ -71,10 +70,10 @@
 <main style="flex-direction: column">
 
     <!--Sezione recent News: visibili 3 notizione-->
-    <section  style="background-color: #1F1E1C; align-self: stretch">
+    <section  style="background-color: #1F1E1C;">
         <div class="main-style" id="rn-content">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
                 <footer class="publication-time">2 min fa</footer>
             </div>
             <span class="news-divisor" style="height: 4rlh"></span>
@@ -93,10 +92,10 @@
     </section>
 
     <!-- Lista di articoli -->
-    <section class="main-style">
+    <section class="main-style" >
         <article class="big-img" id="front-article">
             <div>
-                <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+                <h6 >Di cosa si parla nell'articolo</h6>
                 <h1>FRONT ARTICLE</h1>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">2 min</footer>
@@ -106,7 +105,7 @@
         </article>
         <article class="big-img">
             <div>
-                <h6 class="small-title ">Di cosa si parla nell'articolo</h6>
+                <h6>Di cosa si parla nell'articolo</h6>
                 <h1>Art imm grande</h1>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">2 min</footer>
@@ -116,7 +115,7 @@
         <article class="small-article"> <div>
             <div style="display: flex; align-items: center">
                 <div style="margin-right: 30px">
-                    <p class="small-title">Di cosa si parla nell'articolo</p>
+                    <p >Di cosa si parla nell'articolo</p>
                     <h1>Articolo ScAArittore</h1>
                 </div>
                 <img src="https://picsum.photos/100"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
@@ -127,7 +126,7 @@
         </article>
        <article>
            <div>
-               <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+               <h6 >Di cosa si parla nell'articolo</h6>
                <h1>Titolone</h1>
                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                <footer class="publication-time">2 min</footer>
@@ -142,7 +141,7 @@
        <article class="small-article"> <div>
             <div style="display: flex; align-items: center">
                 <div style="margin-right: 30px">
-                    <p class="small-title">Di cosa si parla nell'articolo</p>
+                    <p >Di cosa si parla nell'articolo</p>
                     <h1>Articolo ScAArittore</h1>
                 </div>
                 <img src="https://picsum.photos/100"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
@@ -153,48 +152,50 @@
         </article>
        <article>
            <div>
-               <h6 class="small-title">Di cosa si parla nell'articolo</h6>
+               <h6 >Di cosa si parla nell'articolo</h6>
                <h1>Titolone</h1>
                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                <footer class="publication-time">2 min</footer>
            </div>
            <img src="https://picsum.photos/488/274" alt="Immagine principale">
-         </article>
+       </article>
 
-        <div id="sub-group">
-            <article>
-                    <div>
-                        <h6 class="small-title">Di cosa si parla nell'articolo</h6>
-                        <h1>Titolone</h1>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                        <footer class="publication-time">2 min</footer>
-                    </div>
-                    <img src="https://picsum.photos/488/274" alt="Immagine principale">
-            </article>
-            <article>
-                    <div>
-                        <h6 class="small-title">Di cosa si parla nell'articolo</h6>
-                        <h1>Titolone</h1>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                        <footer class="publication-time">2 min</footer>
-                    </div>
-                    <img src="https://picsum.photos/488/274" alt="Immagine principale">
-            </article>
+       <div id="sub-group">
 
-            <article>
-                    <div>
-                        <h6 class="small-title">Di cosa si parla nell'articolo</h6>
-                        <h1>Titolone</h1>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                        <footer class="publication-time">2 min</footer>
-                    </div>
-                    <img src="https://picsum.photos/488/274" alt="Immagine principale">
-            </article>
-        </div>
+
+           <article>
+               <div>
+                   <h6 >Di cosa si parla nell'articolo</h6>
+                   <h1>Titolone</h1>
+                   <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                   <footer class="publication-time">2 min</footer>
+               </div>
+               <img src="https://picsum.photos/488/274" alt="Immagine principale">
+           </article>
+           <article>
+               <div>
+                   <h6 >Di cosa si parla nell'articolo</h6>
+                   <h1>Titolone</h1>
+                   <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                   <footer class="publication-time">2 min</footer>
+               </div>
+               <img src="https://picsum.photos/488/274" alt="Immagine principale">
+           </article>
+           <article>
+               <div>
+                   <h6 >Di cosa si parla nell'articolo</h6>
+                   <h1>Titolone</h1>
+                   <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                   <footer class="publication-time">2 min</footer>
+               </div>
+               <img src="https://picsum.photos/488/274" alt="Immagine principale">
+           </article>
+
+       </div>
 
     </section>
 
-    <!-- Rubrica -->
+    <!-- Rubrica TODO-->
     <section>
         <div>
         </div>
@@ -240,15 +241,21 @@
 </main>
 
 <footer>
-    <div id="footer-content">
+    <div class="main-style" id="footer-content">
+        <header>SPIEGEL Gruppe</header>
         <div class="main-style flex-center" style="border-bottom:1px dotted white">
-            <nav class="scroll-container">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 4</a>
-                <a href="#">Link 5</a>
-                <a href="#">Link 6</a>
+            <nav>
+                <a href="#">Abo</a>
+                <a href="#">Abo kudingen</a>
+                <a href="#">Shop</a>
+                <a href="#">Manager magazin</a>
+                <a href="#">Harvard Business Manager</a>
+                <a href="#">11REFUNDEN</a>
+                <a href="#">Jobs</a>
+                <a href="#">Manufactur</a>
+                <a href="#">Spiegel Akademie</a>
+                <a href="#">Spiegel Ed</a>
+
             </nav>
         </div>
 
@@ -260,35 +267,18 @@
 </footer>
 </body>
 
-<script>
-    // Ottieni l'elemento che vuoi copiare
-    var elementoDaCopiare = document.getElementById('recent-news');
-
-    // Crea una copia dell'elemento
-    var copiaElemento = elementoDaCopiare.cloneNode(true);
-
-    // Ottieni l'elemento dove vuoi inserire la copia
-
-
-    var elementoDoveInserire = document.getElementById('rcn2');
-
-    // Inserisci la copia nell'elemento desiderato
-
-    elementoDoveInserire.appendChild(copiaElemento);
-</script>
-
 
 <script>
     window.addEventListener('scroll', function() {
         var header = document.getElementById('main-header');
         if (window.scrollY > 50) {
             header.classList.add('header-small');
-            document.getElementById('link-abbonamento').style.display = "none";
+            document.getElementById('link-iscrizione').style.display = "none";
             document.getElementById('reg-button').style.display = "none";
             document.getElementById('menu-symbol').style.display = "inline-block";
         } else {
             header.classList.remove('header-small');
-            document.getElementById('link-abbonamento').style.display = "initial";
+            document.getElementById('link-iscrizione').style.display = "initial";
             document.getElementById('reg-button').style.display = "initial";
             document.getElementById('menu-symbol').style.display = "none";
 
