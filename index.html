@@ -73,18 +73,15 @@
     <section  style="background-color: #1F1E1C;">
         <div class="main-style" id="rn-content">
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.</p>
+                <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqu.</p>
                 <footer class="publication-time">2 min fa</footer>
             </div>
-            <span class="news-divisor" style="height: 4rlh"></span>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqu.</p>
                 <footer class="publication-time">2 min</footer>
             </div>
-            <span class="news-divisor" style="height: 4rlh"></span>
-
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqu.</p>
                 <footer class="publication-time">2 min fa</footer>
             </div>
 
@@ -93,36 +90,35 @@
 
     <!-- Lista di articoli -->
     <section class="main-style" >
-        <article class="big-img" id="front-article">
+        <article class="big-img-article" id="front-article">
             <div>
-                <h6 >Di cosa si parla nell'articolo</h6>
                 <h1>FRONT ARTICLE</h1>
+                <h2 >Di cosa si parla nell'articolo</h2>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">2 min</footer>
             </div>
             <img src="https://picsum.photos/780/430" alt="Immagine principale">
 
         </article>
-        <article class="big-img">
+        <article class="big-img-article">
             <div>
-                <h6>Di cosa si parla nell'articolo</h6>
                 <h1>Art imm grande</h1>
+                <h2>Di cosa si parla nell'articolo</h2>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">2 min</footer>
             </div>
             <img src="https://picsum.photos/640/360" alt="Immagine principale">
         </article>
-        <article class="small-article"> <div>
-            <div style="display: flex; align-items: center">
-                <div style="margin-right: 30px">
-                    <p >Di cosa si parla nell'articolo</p>
-                    <h1>Articolo ScAArittore</h1>
-                </div>
-                <img src="https://picsum.photos/100"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
-            </div>
+        <article class="small-article">
+                <header>
+                    <div>
+                        <h1>Articolo ScAArittore</h1>
+                        <h2 >Di cosa si parla nell'articolo</h2>
+                    </div>
+                    <img src="https://picsum.photos/100" alt="Foto scrittore">
+                </header>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
             <footer class="publication-time">2 min</footer>
-        </div>
         </article>
        <article>
            <div>
@@ -138,17 +134,16 @@
 
     <!-- Gruppo di articoli -->
     <section class="main-style" id="articles-group" style="background-color: #1F1E1C">
-       <article class="small-article"> <div>
-            <div style="display: flex; align-items: center">
-                <div style="margin-right: 30px">
-                    <p >Di cosa si parla nell'articolo</p>
-                    <h1>Articolo ScAArittore</h1>
-                </div>
-                <img src="https://picsum.photos/100"  style="border-radius: 50%; border: 1px solid white" alt="Foto scrittore">
-            </div>
+       <article class="small-article">
+                <header>
+                    <div>
+                        <h1>Articolo ScAAri su quello che sta succedendottore</h1>
+                        <h2 >Di cosa si parla nell'articolo</h2>
+                    </div>
+                    <img src="https://picsum.photos/100" alt="Foto scrittore">
+                </header>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
             <footer class="publication-time">2 min</footer>
-        </div>
         </article>
        <article>
            <div>
@@ -161,8 +156,6 @@
        </article>
 
        <div id="sub-group">
-
-
            <article>
                <div>
                    <h6 >Di cosa si parla nell'articolo</h6>
@@ -190,15 +183,13 @@
                </div>
                <img src="https://picsum.photos/488/274" alt="Immagine principale">
            </article>
-
        </div>
 
     </section>
 
-    <!-- Rubrica TODO-->
+    <!-- TODO GALLERIA -->
     <section>
-        <div>
-        </div>
+
     </section>
 
 
@@ -265,22 +256,19 @@
         </div>
     </div>
 </footer>
-</body>
-
-
 <script>
     window.addEventListener('scroll', function() {
-        var header = document.getElementById('main-header');
+        let header = document.getElementById('main-header');
         if (window.scrollY > 50) {
             header.classList.add('header-small');
             document.getElementById('link-iscrizione').style.display = "none";
             document.getElementById('reg-button').style.display = "none";
-            document.getElementById('menu-symbol').style.display = "inline-block";
+            document.getElementById('header-menu-symbol').style.display = "inline-block";
         } else {
             header.classList.remove('header-small');
             document.getElementById('link-iscrizione').style.display = "initial";
             document.getElementById('reg-button').style.display = "initial";
-            document.getElementById('menu-symbol').style.display = "none";
+            document.getElementById('header-menu-symbol').style.display = "none";
 
         }
     })
@@ -315,6 +303,9 @@
     });
 
 </script>
+</body>
+
+
 
 
 </html>
