@@ -16,11 +16,11 @@
 <header  id="main-header">
     <div class="main-style">
         <div id="header-logo">
-            <i class="fa-solid fa-bars"  id="header-menu-symbol"></i>
+            <i class="fa-solid fa-bars"  id="header-menu-symbol" onclick="openNav()"></i>
             <a  href="#">DER SPIEGEL</a>
         </div>
         <div id="header-buttons">
-            <a class="header-links" id="reg-button" href="#"><b>Registrati </b><i class='fas fa-angle-right' style="font-weight: bold; font-size: smaller"></i></a>
+            <a class="header-links" id="reg-button" href="#"><b>Registrati </b><i class='fas fa-angle-right' ></i></a>
             <a class="header-links" id="link-iscrizione" href="#"><b>Sottoiscrizione</b></a>
         </div>
     </div>
@@ -29,11 +29,18 @@
 
 <!-- Navigazione -->
 <section  id="navigation-bar">
+    <div class="main-style" id="mobile-nav">
+        <i class=" fa-solid fa-house"> </i>
+        <i class=" fa-regular fa-clock"> </i>
+        <i class="fa-regular fa-address-book"></i>
+        <i class="fa-solid fa-headphones-simple"></i>
+        <i class="fa-solid fa-user"> </i>
+    </div>
     <div class="main-style flex-center">
-        <a href="#" id="nav-menu">
-            <i class="fa-solid fa-bars" style="padding-right: 2px;"></i>
-            <p style="padding-right: 8px; border-right: 1px dashed #F1EFED">Menu</p>
-        </a>
+        <span  id="nav-menu" onclick="openNav()" onfocusout="closeNav()">
+            <i class="fa-solid fa-bars"></i>
+            <span >Menu</span>
+        </span>
 
         <i class='scroll-button  scroll-button-left fas fa-angle-left'></i>
         <nav class="scroll-container">
@@ -61,8 +68,107 @@
             </ul>
         </nav>
         <i  class='scroll-button scroll-button-right fas fa-angle-right'></i>
-        <a href="#" id="nav-search" class='fas fa-search'></a>
+        <div id="nav-search">
+            <input id="search-bar" type="text" name="search" placeholder="Cerca..">
+            <i onclick="openSeacrh()" class="fas fa-search"></i>
+        </div>
     </div>
+
+    <nav id="sidenav" class="sidebar">
+
+        <a href="javascript:void(0)"  id="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">
+            <span>Sottoiscrizione</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Titoli</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link3</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <a href="#">
+            <span>Link4</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link5</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link6</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link7</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <a href="#">
+            <span>Link8</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Sottoiscrizione</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Titoli</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link3</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <a href="#">
+            <span>Link4</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link5</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link6</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link7</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <a href="#">
+            <span>Link8</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link4</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link5</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link6</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="#">
+            <span>Link7</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <a href="#">
+            <span>Link8</span>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+
+    </nav>
 </section>
 
 
@@ -88,6 +194,10 @@
         </div>
     </section>
 
+
+    <!-- Sidebar -->
+
+
     <!-- Lista di articoli -->
     <section class="main-style" >
         <article class="big-img-article" id="front-article">
@@ -95,7 +205,10 @@
                 <h1>FRONT ARTICLE</h1>
                 <h2 >Di cosa si parla nell'articolo</h2>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                <footer class="publication-time">2 min</footer>
+                <footer class="publication-time">
+                    <span>2 min</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                </footer>
             </div>
             <img src="https://picsum.photos/780/430" alt="Immagine principale">
 
@@ -105,7 +218,10 @@
                 <h1>Art imm grande</h1>
                 <h2>Di cosa si parla nell'articolo</h2>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                <footer class="publication-time">2 min</footer>
+                <footer class="publication-time">
+                    <span>2 min</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                </footer>
             </div>
             <img src="https://picsum.photos/640/360" alt="Immagine principale">
         </article>
@@ -115,17 +231,23 @@
                         <h1>Articolo ScAArittore</h1>
                         <h2 >Di cosa si parla nell'articolo</h2>
                     </div>
-                    <img src="https://picsum.photos/100" alt="Foto scrittore">
+                    <img src="https://thispersondoesnotexist.com" alt="Foto scrittore">
                 </header>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-            <footer class="publication-time">2 min</footer>
+            <footer class="publication-time">
+                <span>2 min</span>
+                <i class="fa-regular fa-bookmark"></i>
+            </footer>
         </article>
        <article>
            <div>
                <h6 >Di cosa si parla nell'articolo</h6>
                <h1>Titolone</h1>
                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-               <footer class="publication-time">2 min</footer>
+               <footer class="publication-time">
+                   <span>2 min</span>
+                   <i class="fa-regular fa-bookmark"></i>
+               </footer>
            </div>
            <img src="https://picsum.photos/488/274" alt="Immagine principale">
          </article>
@@ -133,24 +255,30 @@
 
 
     <!-- Gruppo di articoli -->
-    <section class="main-style" id="articles-group" style="background-color: #1F1E1C">
+    <section class="main-style" id="articles-group">
        <article class="small-article">
                 <header>
                     <div>
                         <h1>Articolo ScAAri su quello che sta succedendottore</h1>
                         <h2 >Di cosa si parla nell'articolo</h2>
                     </div>
-                    <img src="https://picsum.photos/100" alt="Foto scrittore">
+                    <img src="https://thispersondoesnotexist.com" alt="Foto scrittore">
                 </header>
             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-            <footer class="publication-time">2 min</footer>
+           <footer class="publication-time">
+           <span>2 min</span>
+           <i class="fa-regular fa-bookmark"></i>
+       </footer>
         </article>
        <article>
            <div>
                <h6 >Di cosa si parla nell'articolo</h6>
                <h1>Titolone</h1>
                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-               <footer class="publication-time">2 min</footer>
+               <footer class="publication-time">
+                   <span>2 min</span>
+                   <i class="fa-regular fa-bookmark"></i>
+               </footer>
            </div>
            <img src="https://picsum.photos/488/274" alt="Immagine principale">
        </article>
@@ -161,7 +289,10 @@
                    <h6 >Di cosa si parla nell'articolo</h6>
                    <h1>Titolone</h1>
                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                   <footer class="publication-time">2 min</footer>
+                   <footer class="publication-time">
+                       <span>2 min</span>
+                       <i class="fa-regular fa-bookmark"></i>
+                   </footer>
                </div>
                <img src="https://picsum.photos/488/274" alt="Immagine principale">
            </article>
@@ -170,7 +301,10 @@
                    <h6 >Di cosa si parla nell'articolo</h6>
                    <h1>Titolone</h1>
                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                   <footer class="publication-time">2 min</footer>
+                   <footer class="publication-time">
+                       <span>2 min</span>
+                       <i class="fa-regular fa-bookmark"></i>
+                   </footer>
                </div>
                <img src="https://picsum.photos/488/274" alt="Immagine principale">
            </article>
@@ -179,7 +313,10 @@
                    <h6 >Di cosa si parla nell'articolo</h6>
                    <h1>Titolone</h1>
                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                   <footer class="publication-time">2 min</footer>
+                   <footer class="publication-time">
+                       <span>2 min</span>
+                       <i class="fa-regular fa-bookmark"></i>
+                   </footer>
                </div>
                <img src="https://picsum.photos/488/274" alt="Immagine principale">
            </article>
@@ -188,9 +325,19 @@
     </section>
 
     <!-- TODO GALLERIA -->
-    <section>
+    <section id="gallery" class="main-style gallery-section">
+        <a href="#" class="gallery-item">
+            <div class="gallery-content">
+                <h1>Titolo galleria</h1>
+                <button class="gallery-button">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>n. Immagini</span>
+                </button>
 
+            </div>
+        </a>
     </section>
+
 
 
     <!-- Sezione Stories -->
@@ -226,13 +373,12 @@
                 </section>
                 <i  class='scroll-button scroll-button-right fas fa-angle-right' style="font-weight: bold; color: #F1EFED "></i>
             </div>
-        </div>
     </section>
 
 </main>
 
-<footer>
-    <div class="main-style" id="footer-content">
+<footer class="main-style">
+    <div  id="footer-title">
         <header>SPIEGEL Gruppe</header>
         <div class="main-style flex-center" style="border-bottom:1px dotted white">
             <nav>
@@ -249,13 +395,41 @@
 
             </nav>
         </div>
+        <div class="main-style flex-center">
+            <nav>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
 
-        <div class="main-style">
-            <p>DER SPIEGEL</p>
-            <p>© 2021 DER SPIEGEL</p>
+            </nav>
         </div>
     </div>
 </footer>
+
+
+<script>
+    let sidenav = document.getElementById("sidenav");
+
+    function openNav() {
+        document.getElementById("sidenav").style.width = "375px";
+    }
+
+    function openSeacrh() {
+        let s = document.getElementById("nav-search")
+        s.style.backgroundColor = "#2F2D2B";
+        s.style.padding = "8px 28px";
+        s.style.marginLeft = "5px";
+        s.style.border = "1px solid white"
+        document.getElementById("search-bar").style.width = "100%";
+    }
+
+
+
+    function closeNav() {
+        sidenav.style.width = "0";
+    }
+
+</script>
 <script>
     window.addEventListener('scroll', function() {
         let header = document.getElementById('main-header');
@@ -275,9 +449,11 @@
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var scrollButtonsRight = document.querySelectorAll('.scroll-button-right');
-        var scrollButtonsLeft = document.querySelectorAll('.scroll-button-left');
-        var scrollContainers = document.querySelectorAll('.scroll-container');
+        let scrollButtonsRight = document.querySelectorAll('.scroll-button-right');
+        let scrollButtonsLeft = document.querySelectorAll('.scroll-button-left');
+        let scrollContainers = document.querySelectorAll('.scroll-container');
+        let scrollLength;
+
 
         scrollButtonsRight.forEach((button, index) => {
             button.addEventListener('click', function() {

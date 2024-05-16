@@ -1,13 +1,9 @@
 body {
     margin: 0 0;
     background-color: black;
-    font-family:  Arial, sans-serif;
+    font-family: SpiegelSerifUI, Constantia, Georgia, serif;
     color: white;
     transition: all 1s ease;
-}
-
-body *::-webkit-scrollbar {
-    display: none;
 }
 
 
@@ -70,6 +66,52 @@ body *::-webkit-scrollbar {
 }
 */
 
+
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #1F1E1C;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+
+}
+#closebtn{
+    align-self: flex-end;
+}
+
+.sidebar a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #F1EFED;
+    transition: 0.3s;
+}
+
+.sidebar a:hover * {
+    color: #D03D12;
+}
+
+
+main {
+    margin-left: 0;
+    transition: margin-left .5s;
+}
+
+
 /* Stili per l'header */
 #main-header {
     position: sticky;
@@ -130,8 +172,7 @@ body *::-webkit-scrollbar {
 /* Barra di Navigazione */
 #navigation-bar {
     margin-bottom: 2px;
-    padding-top: 10px;
-    padding-bottom: 13px;
+    padding: 10px;
     font-size: small;
     background-color: #1F1E1C;
     color: #F1EFED;
@@ -143,7 +184,7 @@ body *::-webkit-scrollbar {
     text-decoration: none;
 }
 
-#navigation-bar i {
+#navigation-bar  .scroll-container i {
     font-weight: bold;
     color: #F1EFED
 }
@@ -153,16 +194,53 @@ body *::-webkit-scrollbar {
     justify-self: start;
     flex-direction: row;
     align-items: center;
+    > span {
+        padding:0 8px;
+        border-right: 1px dashed #F1EFED;
+    }
+    :hover {
+        cursor: pointer;
+    }
 }
 
 #nav-search {
     display: flex;
     justify-self: end;
+    justify-content: space-between;
     margin-top: 2px;
     border-left: 1px dashed;
     padding-left: 8px;
+    button {
+        margin-left: 20px;
+        background-color: #1F1E1C;
+    }
+
 }
 
+
+
+#nav-search input[text]{
+    background-color: #2F2D2B;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #F1EFED;
+    :focus {
+        border: 0;
+    }
+}
+
+
+#nav-search:hover {
+    text-decoration: none;
+}
+#search-bar {
+    background-color: #2F2D2B;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 
 
 #navigation-bar nav ul {
@@ -196,8 +274,11 @@ body *::-webkit-scrollbar {
 }
 
 
-#nav-search:hover {
-    text-decoration: none;
+
+
+#mobile-nav {
+   display: none;
+
 }
 
 #rn-content {
@@ -225,8 +306,12 @@ body *::-webkit-scrollbar {
 }
 
 .publication-time {
-    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
     color: #cecece;
+
+
 }
 
 
@@ -243,23 +328,24 @@ article {
 /*TODO DA RIVEDERE */
 article img{
     max-width: 100%;
-    background-color: #1F1E1C;
 }
 /*Todo da rivedere */
 /* Articoli con immagine più grande */
 article.big-img-article > img {
     flex: 2;
-    padding-left: 10px;
 }
 article div {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    margin-right: 10px;
 }
 
 article h1 {
-    order: 2;
+    order:2;
     font-size: 36px;
     font-weight: bold;
+    margin: 0 0;
 }
 article h2 {
     order: 1;
@@ -291,9 +377,9 @@ article footer {
     }
 }
 .small-article header img {
+    width: 90px;
     align-self: center;
     border-radius: 50%;
-    border: 1px solid white;
     margin-left: 5px;
     max-width: 100%;
     height: auto;
@@ -312,15 +398,19 @@ article footer {
 }
 
 
-#articles-group {
-    padding: 16px 25px;
-    border-radius: 8px;
-}
 
-#articles-group >  *{
+#articles-group {
+    background-color: #1F1E1C;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px 24px;
+    border-radius: 5px;
+}
+#articles-group > * {
+    margin: 0 0;
     border-radius: 0;
     border-bottom: 2px solid #cecece;
-    padding: 16px 0;
 }
 
 
@@ -329,17 +419,19 @@ article footer {
     flex-direction: row;
     justify-content: center;
     border-bottom: none;
-    padding: 0 0;
 }
-
 #sub-group > article {
-    display: flex;
     flex: 1 1 30%;
+    display: flex;
     flex-direction: column-reverse;
-    padding: 0 10px;
+    padding:  10px;
     border-radius: 0;
     border-right: 2px solid #cecece;
+    h1 {
+        font-size: 23px;
+    }
 }
+
 
 #sub-group > article:last-child {
     border-right: none;
@@ -389,11 +481,11 @@ article footer {
     justify-content: flex-end;
     overflow-x: auto;
     background-size: cover;
-    background-repeat:  no-repeat;
-    background: linear-gradient(to top, #1F1E1C, transparent), url("https://picsum.photos/168/265");
+    background-repeat: no-repeat;
     background-position: center;
-
+    background-image: linear-gradient(to top, #1F1E1C, transparent), url("https://picsum.photos/168/265");
 }
+
 #stories-content .scroll-container > div > img{
     position: absolute;
     z-index: -1;
@@ -404,13 +496,16 @@ article footer {
 }
 
 #stories-content .scroll-button{
-    border: 2px solid white;
+    border: 2px solid #808080;
     width: 30px;
     height: 30px;
+    color: white;
     border-radius: 50%;
     padding: 5px;
     background-color: #1F1E1C;
     z-index: 5;
+
+
 }
 
 #stories-content .scroll-button-left {
@@ -426,6 +521,10 @@ article footer {
     top: 50%;
 }
 
+#stories-content .scroll-button:hover {
+    border-color: white;
+}
+
 #stories-content .scroll-container  p{
     padding-left: 0;
 
@@ -437,42 +536,105 @@ article footer {
 }
 
 
-#footer-content {
+/* Stile per la sezione galleria */
+#gallery{
+    margin-top: 16px;
+    padding: 16px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F1E1C;
+    border-radius: 10px;
+}
+
+.gallery-item {
+
+    width: 960px; /* Puoi modificare la larghezza come desideri */
+    height: 540px; /* Puoi modificare l'altezza come desideri */
+    background: linear-gradient(to top, #1F1E1C, transparent), url('https://picsum.photos/960/540') no-repeat center center;
+    background-size: cover;
+    text-decoration: none;
+    margin: 10px;
+
+}
+
+.gallery-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+    * {
+        margin: 18px;
+    }
+    h1 {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+}
+
+.gallery-button {
+    font-weight: bold;
+    background-color: #D03D12;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    i {
+        display: none;
+    }
+}
+
+.gallery-button:hover {
+    background-color: rgba(208, 61, 18, 0.7);
+}
+
+
+/* Transizioni fluide */
+
+
+
+
+#footer-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px 25px;
     background-color: #2F2D2B;
-}
-
-#footer-content nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    align-items: flex-start;
-    overflow: auto;
     padding: 16px 24px;
-}
-#footer-content a {
-    font-size: 13px;
-    color: #BBB9B7;
-    white-space: nowrap;
-    text-decoration: none;
-    margin: 0 6px;
-}
+    font-family: Arial, sans-serif;
 
-#footer-content a:hover {
-    color: #F1EFED;
-}
-
-
-#footer-content header {
+    header {
     font-size: 17px;
     font-weight: bold;
     padding: 10px;
     color: #F1EFED;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        align-items: flex-start;
+        overflow: auto;
+        padding: 16px 24px;
+    }
+
+    a {
+        font-size: 13px;
+        color: #BBB9B7;
+        white-space: nowrap;
+        text-decoration: none;
+        margin: 0 6px;
+    }
+    a:hover {
+        color: #F1EFED;
+    }
 }
 
 * {
@@ -481,6 +643,18 @@ article footer {
 i {
     cursor: pointer;
 }
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Impact, fantasy;
+}
+
+#reg-button .fa-angle-right {
+    font-weight: bold;
+    font-size: smaller;
+}
+
+
 @media screen and (max-width: 980px) {
     .main-style {
         width: 100%;
@@ -498,6 +672,19 @@ i {
     #navigation-bar {
         overflow-x: auto;
     }
+
+    #mobile-nav{
+        background-color: #1F1E1C;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 8px 0;
+        > i {
+            font-size: 20px;
+        }
+
+    }
+
 
     #rn-content {
         display: flex;
@@ -550,45 +737,73 @@ i {
 }
 
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 750px) {
     .main-style {
         width: 550px
     }
-
-}
-
-@media screen and (max-width: 550px){
-    .main-style {
+    .gallery-item {
         width: 100%;
-    }
-
-    * h1 {
-        font-size: 24px;
-    }
-
-
-    article {
-        margin: 5px 0;
-        padding: 0 0;
-    }
-
-    article > div {
-        padding: 5px 8px;
-    }
-
-    .big-img-article > img {
-        flex: 0;
-
-        padding: 0 0;
-        justify-self: center;
-        width: 100vw;
+        height: 300px;
     }
 
     #nav-menu, #nav-search {
         display: none;
     }
+    .gallery-content h1{
+        font-size: 16px;
+    }
 
-    #footer-content nav {
+    .gallery-button{
+        padding: 2px;
+        i {
+            display: block;
+            padding: 0;
+        }
+        span {
+            display: none;
+            padding: 0;
+        }
+    }
+
+}
+
+/* Cellulari */
+@media screen and (max-width: 550px){
+    .main-style {
+        width: 100%;
+    }
+    * h1 {
+        font-size: 24px;
+    }
+
+    main > * {
+        margin: 7px 0;
+    }
+
+    article {
+        margin: 5px 0;
+        padding: 6px 9px;
+        border-radius: 0;
+    }
+
+
+    .big-img-article{
+        padding: 0 0;
+        >div {
+            padding: 6px 9px;
+        }
+        img {
+            flex: 1;
+            width: 100vw;
+        }
+    }
+
+    .small-article img {
+        width: 45px;
+        object-fit: cover;
+    }
+
+    #footer-title nav {
         flex-wrap: wrap;
         padding: 8px 0;
         > a {
@@ -596,8 +811,16 @@ i {
         }
     }
 
-    #footer-content header {
+    #footer-title header {
         align-self: flex-start;
+    }
+
+    .scroll-button {
+        display: none;
+    }
+
+    body * {
+        border-radius: 0;
     }
 
 }
