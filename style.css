@@ -677,7 +677,6 @@ article footer {
     justify-content: center;
     align-items: center;
     background-color: #2F2D2B;
-    padding: 16px 24px;
 
     header {
     font-size: 17px;
@@ -697,7 +696,7 @@ article footer {
     a {
         font-size: 13px;
         color: #BBB9B7;
-        white-space: nowrap;
+        white-space: wrap;
         text-decoration: none;
         margin: 0 6px;
     }
