@@ -10,9 +10,7 @@
 
 
 <body>
-<!-- Header principale -->
-
-
+<!-- Header della pagina -->
 <header  id="main-header">
     <div class="main-style">
         <div id="header-logo">
@@ -20,8 +18,8 @@
             <a  href="#">DER SPIEGEL</a>
         </div>
         <div id="header-buttons">
-            <a class="header-links" id="reg-button" href="#"><b>Registrati </b><i class='fas fa-angle-right' ></i></a>
-            <a class="header-links" id="link-iscrizione" href="#"><b>Sottoiscrizione</b></a>
+            <a id="reg-button" href="#"><span>Registrati </span><i class='fas fa-angle-right' ></i></a>
+            <a  id="link-iscrizione" href="#"><span>Sottoiscrizione</span></a>
         </div>
     </div>
 </header>
@@ -45,36 +43,39 @@
         <i class='scroll-button  scroll-button-left fas fa-angle-left'></i>
         <nav class="scroll-container">
             <ul>
-                <li style="padding: 0 16px; border-right: 1px dotted white"><a href="#" >Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
-                <li><a href="#">Link 6</a></li>
-                <li><a href="#">Link 7</a></li>
-                <li><a href="#">Link 8</a></li>
-                <li><a href="#">Link 9</a></li>
-                <li><a href="#">Link 10</a></li>
-                <li><a href="#">Link 11</a></li>
-                <li><a href="#">Link 12</a></li>
-                <li><a href="#">Link 13</a></li>
-                <li><a href="#">Link 14</a></li>
-                <li><a href="#">Link 15</a></li>
-                <li><a href="#">Link 16</a></li>
-                <li><a href="#">Link 17</a></li>
-                <li><a href="#">Link 18</a></li>
-                <li><a href="#">Link 19</a></li>
-                <li><a href="#">Link 20</a></li>
+                <li style="padding: 0 16px; border-right: 1px dotted white"><a href="#" ><span>Link 1</span></a></li>
+                <li><a href="#" title="Link 2" ><span>Link 2</span></a></li>
+                <li><a href="#"><span>Link 3</span></a></li>
+                <li><a href="#"><span>Link 4</span></a></li>
+                <li><a href="#"><span>Link 5</span></a></li>
+                <li><a href="#"><span>Link 6</span></a></li>
+                <li><a href="#"><span>Link 7</span></a></li>
+                <li><a href="#"><span>Link 8</span></a></li>
+                <li><a href="#"><span>Link 9</span></a></li>
+                <li><a href="#"><span>Link 10</span></a></li>
+                <li><a href="#"><span>Link 11</span></a></li>
+                <li><a href="#"><span>Link 12</span></a></li>
+                <li><a href="#"><span>Link 13</span></a></li>
+                <li><a href="#"><span>Link 14</span></a></li>
+                <li><a href="#"><span>Link 15</span></a></li>
+                <li><a href="#"><span>Link 16</span></a></li>
+                <li><a href="#"><span>Link 17</span></a></li>
+                <li><a href="#"><span>Link 18</span></a></li>
+                <li><a href="#"><span>Link 19</span></a></li>
+                <li><a href="#"><span>Link 20</span></a></li>
             </ul>
         </nav>
         <i  class='scroll-button scroll-button-right fas fa-angle-right'></i>
-        <div id="nav-search">
+        <!--<div id="nav-search">
             <input id="search-bar" type="text" name="search" placeholder="Cerca..">
             <i onclick="openSeacrh()" class="fas fa-search"></i>
-        </div>
+        </div>-->
+        <i id="nav-search" class="fas fa-search"></i>
+
     </div>
 
-    <nav id="sidenav" class="sidebar">
+    <!-- Sidebar -->
+    <aside id="sidenav" class="sidebar">
 
         <a href="javascript:void(0)"  id="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">
@@ -168,11 +169,11 @@
         </a>
 
 
-    </nav>
+    </aside>
 </section>
 
 
-<!-- Contenuti -->
+<!-- Contenuto pagina-->
 <main style="flex-direction: column">
 
     <!--Sezione recent News: visibili 3 notizione-->
@@ -183,7 +184,7 @@
                 <footer class="publication-time">2 min fa</footer>
             </div>
             <div>
-                <p>Lorem ipsum dolor sit amet, labore et dolore magna aliqu.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <footer class="publication-time">2 min</footer>
             </div>
             <div>
@@ -194,28 +195,27 @@
         </div>
     </section>
 
-
-    <!-- Sidebar -->
-
-
     <!-- Lista di articoli -->
     <section class="main-style" >
         <article class="big-img-article" id="front-article">
-            <div>
-                <h1>FRONT ARTICLE</h1>
-                <h2 >Di cosa si parla nell'articolo</h2>
-                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                <footer class="publication-time">
-                    <span>2 min</span>
-                    <i class="fa-regular fa-bookmark"></i>
-                </footer>
-            </div>
-            <img src="https://picsum.photos/780/430" alt="Immagine principale">
-
-        </article>
+                <div>
+                    <h1>FRONT ARTICLE</h1>
+                    <h2 >Di cosa si parla nell'articolo</h2>
+                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                    <footer class="publication-time">
+                        <span>2 min</span>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </footer>
+                </div>
+                <picture>
+                    <source media="(min-width: 1000px)" srcset="https://placehold.co/960x438">
+                    <source media="(max-width: 750px)" srcset="https://placehold.co/520x391">
+                    <img src="https://placehold.co/780x430" alt="Immagine principale">
+                </picture>
+            </article>
         <article class="big-img-article">
             <div>
-                <h1>Art imm grande</h1>
+                <h1>Articolo grande</h1>
                 <h2>Di cosa si parla nell'articolo</h2>
                 <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
                 <footer class="publication-time">
@@ -223,108 +223,186 @@
                     <i class="fa-regular fa-bookmark"></i>
                 </footer>
             </div>
-            <img src="https://picsum.photos/640/360" alt="Immagine principale">
+           <picture>
+                <source media="(min-width: 980px)" srcset="https://placehold.co/872x420">
+                <source media="(max-width: 750px)" srcset="https://placehold.co/640x360">
+                <img src="https://placehold.co/640x360" alt="Immagine principale">
+            </picture>
+        </article>
+        <article class="fixed-image-article">
+                <div>
+                    <h1>Articolo grande Relative</h1>
+                    <h2>Di cosa si parla nell'articolo</h2>
+                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                    <footer class="publication-time">
+                        <span>2 min</span>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </footer>
+                </div>
+                <picture>
+                <source media="(min-width: 980px)" srcset="https://placehold.co/720x400">
+                <source media="(max-width: 750px)" srcset="https://placehold.co/640x360">
+                <img src="https://placehold.co/640x360" alt="Immagine principale">
+            </picture>
+        </article>
+
+        <article>
+            <div>
+                <h2 >Di cosa si parla nell'articolo</h2>
+                <h1>Titolo articolo</h1>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                <footer class="publication-time">
+                    <span>2 min</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                </footer>
+            </div>
+            <picture>
+                <source media="(min-width: 980px)" srcset="https://placehold.co/488x274">
+                <source media="(max-width: 750px)" srcset="https://placehold.co/872x490">
+                <img src="https://placehold.co/780x430" alt="Immagine principale">
+            </picture>
+
+        </article>
+        <article>
+            <div>
+                <h2 >Di cosa si parla nell'articolo</h2>
+                <h1>Titolo articolo</h1>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                <footer class="publication-time">
+                    <span>2 min</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                </footer>
+            </div>
+            <picture>
+                <source media="(min-width: 980px)" srcset="https://placehold.co/488x274">
+                <source media="(max-width: 750px)" srcset="https://placehold.co/872x490">
+                <img src="https://placehold.co/780x430" alt="Immagine principale">
+            </picture>
         </article>
         <article class="small-article">
-                <header>
-                    <div>
-                        <h1>Articolo ScAArittore</h1>
-                        <h2 >Di cosa si parla nell'articolo</h2>
-                    </div>
-                    <img src="https://thispersondoesnotexist.com" alt="Foto scrittore">
-                </header>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+            <header>
+                <div>
+                    <h1>Articolo senza foto</h1>
+                    <h2 >Di cosa si parla nell'articolo</h2>
+                </div>
+            </header>
+            <p >Fusce id lacus quis metus tempus luctus. Nunc ut eros posuere, suscipit lectus et, mollis turpis. Duis sagittis, sem sit amet feugiat faucibus, sem erat lacinia dui, at congue nunc massa ut libero. Morbi elementum faucibus ex, quis fringilla nisl porta eu. Integer ut aliquam nisi, eget gravida massa. Sed luctus elementum odio vitae mollis. </p>
             <footer class="publication-time">
                 <span>2 min</span>
                 <i class="fa-regular fa-bookmark"></i>
             </footer>
         </article>
-       <article>
-           <div>
-               <h6 >Di cosa si parla nell'articolo</h6>
-               <h1>Titolone</h1>
-               <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-               <footer class="publication-time">
-                   <span>2 min</span>
-                   <i class="fa-regular fa-bookmark"></i>
-               </footer>
-           </div>
-           <img src="https://picsum.photos/488/274" alt="Immagine principale">
-         </article>
     </section>
 
 
     <!-- Gruppo di articoli -->
     <section class="main-style" id="articles-group">
        <article class="small-article">
-                <header>
-                    <div>
-                        <h1>Articolo ScAAri su quello che sta succedendottore</h1>
-                        <h2 >Di cosa si parla nell'articolo</h2>
-                    </div>
-                    <img src="https://thispersondoesnotexist.com" alt="Foto scrittore">
-                </header>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+           <header>
+               <div>
+                   <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                   <h2 >Di cosa si parla nell'articolo</h2>
+               </div>
+               <img src="https://thispersondoesnotexist.com" alt="Foto scrittore">
+           </header>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
            <footer class="publication-time">
-           <span>2 min</span>
-           <i class="fa-regular fa-bookmark"></i>
-       </footer>
-        </article>
-       <article>
-           <div>
-               <h6 >Di cosa si parla nell'articolo</h6>
-               <h1>Titolone</h1>
-               <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-               <footer class="publication-time">
-                   <span>2 min</span>
-                   <i class="fa-regular fa-bookmark"></i>
-               </footer>
-           </div>
-           <img src="https://picsum.photos/488/274" alt="Immagine principale">
+               <span>2 min</span>
+               <i class="fa-regular fa-bookmark"></i>
+           </footer>
        </article>
-
+       <article>
+            <div>
+                <h2 >Di cosa si parla nell'articolo</h2>
+                <h1>Titolo articolo in gruppo</h1>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                <footer class="publication-time">
+                    <span>2 min</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                </footer>
+            </div>
+            <picture>
+                <source media="(min-width: 980px)" srcset="https://placehold.co/488x274">
+                <source media="(max-width: 750px)" srcset="https://placehold.co/872x490">
+                <img src="https://placehold.co/780x430" alt="Immagine principale">
+            </picture>
+        </article>
        <div id="sub-group">
-           <article>
-               <div>
-                   <h6 >Di cosa si parla nell'articolo</h6>
-                   <h1>Titolone</h1>
-                   <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                   <footer class="publication-time">
-                       <span>2 min</span>
-                       <i class="fa-regular fa-bookmark"></i>
-                   </footer>
-               </div>
-               <img src="https://picsum.photos/488/274" alt="Immagine principale">
-           </article>
-           <article>
-               <div>
-                   <h6 >Di cosa si parla nell'articolo</h6>
-                   <h1>Titolone</h1>
-                   <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                   <footer class="publication-time">
-                       <span>2 min</span>
-                       <i class="fa-regular fa-bookmark"></i>
-                   </footer>
-               </div>
-               <img src="https://picsum.photos/488/274" alt="Immagine principale">
-           </article>
-           <article>
-               <div>
-                   <h6 >Di cosa si parla nell'articolo</h6>
-                   <h1>Titolone</h1>
-                   <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
-                   <footer class="publication-time">
-                       <span>2 min</span>
-                       <i class="fa-regular fa-bookmark"></i>
-                   </footer>
-               </div>
-               <img src="https://picsum.photos/488/274" alt="Immagine principale">
-           </article>
+           <div>
+               <article>
+                   <div>
+                       <h2 >Di cosa si parla nell'articolo</h2>
+                       <h1>Titolo 1</h1>
+                       <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                       <footer class="publication-time">
+                           <span>2 min</span>
+                           <i class="fa-regular fa-bookmark"></i>
+                       </footer>
+                   </div>
+                   <picture>
+                       <source media="(min-width: 980px)" srcset="https://placehold.co/488x274">
+                       <source media="(max-width: 750px)" srcset="https://placehold.co/872x490">
+                       <img src="https://placehold.co/780x430" alt="Immagine principale">
+                   </picture>
+               </article>
+           </div>
+           <div>
+               <article>
+                   <div>
+                       <h2 >Di cosa si parla nell'articolo</h2>
+                       <h1>Titolo 2</h1>
+                       <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                       <footer class="publication-time">
+                           <span>2 min</span>
+                           <i class="fa-regular fa-bookmark"></i>
+                       </footer>
+                   </div>
+                   <picture>
+                       <source media="(min-width: 980px)" srcset="https://placehold.co/488x274">
+                       <source media="(max-width: 750px)" srcset="https://placehold.co/872x490">
+                       <img src="https://placehold.co/780x430" alt="Immagine principale">
+                   </picture>
+               </article>
+           </div>
+           <div>
+               <article>
+                   <div>
+                       <h2 >Di cosa si parla nell'articolo</h2>
+                       <h1>Aenean sit amet accumsan enim, a ornare velit.</h1>
+                       <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                       <footer class="publication-time">
+                           <span>2 min</span>
+                           <i class="fa-regular fa-bookmark"></i>
+                       </footer>
+                   </div>
+                   <picture>
+                       <source media="(min-width: 980px)" srcset="https://placehold.co/488x274">
+                       <source media="(max-width: 750px)" srcset="https://placehold.co/872x490">
+                       <img src="https://placehold.co/780x430" alt="Immagine principale">
+                   </picture>
+               </article>
+           </div>
        </div>
-
+        <article class="big-img-article centered-article">
+            <div>
+                <h1>Articolo grande</h1>
+                <h2>Di cosa si parla nell'articolo</h2>
+                <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique diam imperdiet turpis dapibus maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed imperdiet volutpat placerat. Morbi ullamcorper feugiat mauris, quis aliquam ligula feugiat et.</p>
+                <footer class="publication-time">
+                    <span>2 min</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                </footer>
+            </div>
+            <picture>
+                <source media="(min-width: 980px)" srcset="https://placehold.co/872x420">
+                <source media="(max-width: 750px)" srcset="https://placehold.co/640x360">
+                <img src="https://placehold.co/640x360" alt="Immagine principale">
+            </picture>
+        </article>
     </section>
 
-    <!-- TODO GALLERIA -->
+
+    <!-- GALLERIA -->
     <section id="gallery" class="main-style gallery-section">
         <a href="#" class="gallery-item">
             <div class="gallery-content">
@@ -333,7 +411,6 @@
                     <i class="fa-solid fa-folder"></i>
                     <span>n. Immagini</span>
                 </button>
-
             </div>
         </a>
     </section>
@@ -345,7 +422,7 @@
             <header>STORIES</header>
             <div id="stories-content">
                 <i class='scroll-button  scroll-button-left fas fa-angle-left'></i>
-                <section class="scroll-container">
+                <div class="scroll-container">
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
                     </div>
@@ -370,43 +447,146 @@
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
                     </div>
-                </section>
-                <i  class='scroll-button scroll-button-right fas fa-angle-right' style="font-weight: bold; color: #F1EFED "></i>
+                </div>
+                <i  class='scroll-button scroll-button-right fas fa-angle-right'></i>
             </div>
     </section>
 
 </main>
 
 <footer class="main-style">
+    <div>
+
+    </div>
+    <section id="magazines">
+        <div>
+            <h1>Magazines di Spiegel</h1>
+        </div>
+        <div id="magazines-content">
+            <i class='scroll-button  scroll-button-left fas fa-angle-left'></i>
+                <div class="scroll-container">
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/136x181">
+                        <p>Lorem ipsum dolor.  </p>
+                    </div>
+                </div>
+                <i  class='scroll-button scroll-button-right fas fa-angle-right'></i>
+        </div>
+    </section>
+
+    <div id="magazines">
+        <i class="scroll-button scroll-button-right"></i>
+        <div class="scroll-container">
+        </div>
+        <i class="scroll-button scroll-button-right"></i>
+    </div>
+
     <div  id="footer-title">
         <header>SPIEGEL Gruppe</header>
         <div class="main-style flex-center" style="border-bottom:1px dotted white">
             <nav>
-                <a href="#">Abo</a>
-                <a href="#">Abo kudingen</a>
-                <a href="#">Shop</a>
-                <a href="#">Manager magazin</a>
-                <a href="#">Harvard Business Manager</a>
-                <a href="#">11REFUNDEN</a>
-                <a href="#">Jobs</a>
-                <a href="#">Manufactur</a>
-                <a href="#">Spiegel Akademie</a>
-                <a href="#">Spiegel Ed</a>
-
+                <a href="#"><span>Abo</span></a>
+                <a href="#"><span>Abo kudingen</span></a>
+                <a href="#"><span>Shop</span></a>
+                <a href="#"><span>Manager magazin</span></a>
+                <a href="#"><span>Harvard Business Manager</span></a>
+                <a href="#"><span>11REFUNDEN</span></a>
+                <a href="#"><span>Jobs</span></a>
+                <a href="#"><span>Manufactur</span></a>
+                <a href="#"><span>Spiegel Akademie</span></a>
+                <a href="#"><span>Spiegel Ed</span></a>
+                <a href="#"><span>Jobs</span></a>
+                <a href="#"><span>Manufactur</span></a>
+                <a href="#"><span>Spiegel Akademie</span></a>
+                <a href="#"><span>Spiegel Ed</span></a>
             </nav>
         </div>
         <div class="main-style flex-center">
             <nav>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">X</a>
-
+                <a href="#">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <span>Facebook</span></a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span></a>
+                <a href="#">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>Segui</span></a>
             </nav>
         </div>
     </div>
 </footer>
 
+<!-- Assegnazione Titoli-->
+<script>
+    function setTitle(obj, element) {
+        const subelement = obj.querySelector(element);
+        if (subelement) {
+            obj.title = subelement.textContent;
+        }
+    }
 
+
+    document.querySelectorAll('article').forEach(article => {
+        setTitle(article, 'h1');
+    });
+
+    document.querySelectorAll('a').forEach(a => {
+        setTitle(a, 'span');
+    });
+
+    document.getElementById('rn-content').querySelectorAll('div').forEach(div => {
+        setTitle(div, 'p');
+    });
+
+
+</script>
+
+<!-- Apertura/Chiusura sidebar-->
 <script>
     let sidenav = document.getElementById("sidenav");
 
@@ -414,45 +594,18 @@
         document.getElementById("sidenav").style.width = "375px";
     }
 
-    function openSeacrh() {
-        let s = document.getElementById("nav-search")
-        s.style.backgroundColor = "#2F2D2B";
-        s.style.padding = "8px 28px";
-        s.style.marginLeft = "5px";
-        s.style.border = "1px solid white"
-        document.getElementById("search-bar").style.width = "100%";
-    }
-
-
-
     function closeNav() {
         sidenav.style.width = "0";
     }
 
 </script>
-<script>
-    window.addEventListener('scroll', function() {
-        let header = document.getElementById('main-header');
-        if (window.scrollY > 50) {
-            header.classList.add('header-small');
-            document.getElementById('link-iscrizione').style.display = "none";
-            document.getElementById('reg-button').style.display = "none";
-            document.getElementById('header-menu-symbol').style.display = "inline-block";
-        } else {
-            header.classList.remove('header-small');
-            document.getElementById('link-iscrizione').style.display = "initial";
-            document.getElementById('reg-button').style.display = "initial";
-            document.getElementById('header-menu-symbol').style.display = "none";
 
-        }
-    })
-</script>
+<!-- Gestione scroll containers buttons -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let scrollButtonsRight = document.querySelectorAll('.scroll-button-right');
         let scrollButtonsLeft = document.querySelectorAll('.scroll-button-left');
         let scrollContainers = document.querySelectorAll('.scroll-container');
-        let scrollLength;
 
 
         scrollButtonsRight.forEach((button, index) => {
@@ -479,7 +632,30 @@
     });
 
 </script>
+
+<!-- cambio stile header -->
+<script>
+    window.onscroll = function() {
+        var header = document.getElementById("main-header");
+        var headerLogo = document.getElementById("header-logo");
+        var headerMenuSymbol = document.getElementById("header-menu-symbol");
+        var headerButtons = document.getElementById("header-buttons");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+            headerMenuSymbol.style.width = "30px";
+            headerMenuSymbol.style.visibility = "visible";
+            headerButtons.style.display = "none";
+        } else {
+            header.classList.remove("scrolled");
+            headerMenuSymbol.style.width = "0";
+            headerMenuSymbol.style.visibility = "hidden";
+            headerButtons.style.display = "flex";
+        }
+    };
+</script>
+
 </body>
+
 
 
 

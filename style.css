@@ -1,12 +1,8 @@
 body {
     margin: 0 0;
     background-color: black;
-    font-family: SpiegelSerifUI, Constantia, Georgia, serif;
     color: white;
-    transition: all 1s ease;
 }
-
-
 
 /* Stile per contenuti principale */
 .main-style{
@@ -15,18 +11,36 @@ body {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1020px) {
+    .fixed-image-article {
+        display: block;
+        background-color: black;
+        width: 100%;
+        height: 464px;
+        position: relative;
+        picture {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        div {
+            background-color: #1F1E1C;
+            padding: 30px;
+            width: 336px;
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+    }
+}
 
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.small-text{
-    font-size: small;
-    color: #F1EFED;
-}
-
 
 .scroll-container {
     display: flex;
@@ -53,20 +67,6 @@ body {
     display: none;
 }
 
-/* TODO
-.tooltip .tooltiptext{
-    visibility: hidden;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 1px;
-}
-.tooltip:hover .tooltiptext{
-    visibility: visible;
-}
-*/
-
-
 
 /* Sidebar */
 .sidebar {
@@ -75,7 +75,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 11;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -83,6 +83,9 @@ body {
     overflow-x: hidden;
     padding-top: 20px;
     transition: 0.5s;
+    > * {
+        margin: 8px 15px;
+    }
 
 }
 #closebtn{
@@ -111,77 +114,87 @@ main {
     transition: margin-left .5s;
 }
 
-
-/* Stili per l'header */
 #main-header {
+    padding: 15px 0;
+    z-index: 10;
     position: sticky;
     top: 0;
-
     background-color: #D03D12;
-    display: flex;
-    padding: 20px;
-
+    transition: all 0.5s;
 }
 
-#main-header a{
+#main-header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-header * {
+    transition: all 0.5s;
+}
+
+#main-header a {
     color: white;
     text-decoration: none;
 }
 
 #header-logo {
-    float: left;
+    margin-left: 8px;
     font-size: 35px;
     font-weight: bold;
 }
 
 #header-menu-symbol {
-    display: none;
-    transition: display 1s;
+    width: 0;
+    display: inline;
+    visibility: hidden;
+    transition: width 1s ease;
 }
 
-
-.header-links {
+#header-buttons > a {
     font-size: 13px;
-    float: right;
     padding: 10px;
 }
 
-#link-iscrizione b{
+#link-iscrizione span {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
-#reg-button{
+
+#reg-button {
     background-color: white;
     margin: 0 5px;
     border-radius: 2px;
 }
 
-#reg-button > *{
+#reg-button > * {
     color: #D03D12;
 }
 
 
-/*  Quando scroll down */
-.header-small {
-    padding: 5px;
-    font-size: 10px;
+/* Stile per l'header quando scroll down*/
+#main-header.scrolled {
+    padding: 10px 0;
+    * {
+        font-size: 20px;
+    }
 }
-
 
 
 /* Barra di Navigazione */
 #navigation-bar {
     margin-bottom: 2px;
-    padding: 10px;
-    font-size: small;
+    padding: 20px 0;
+    font-size: 14px;
     background-color: #1F1E1C;
     color: #F1EFED;
 }
 
-
 #navigation-bar a {
     color: #F1EFED;
     text-decoration: none;
+
 }
 
 #navigation-bar  .scroll-container i {
@@ -196,7 +209,7 @@ main {
     align-items: center;
     > span {
         padding:0 8px;
-        border-right: 1px dashed #F1EFED;
+        border-right: 1px dashed rgba(241, 239, 237, 0.73);
     }
     :hover {
         cursor: pointer;
@@ -217,8 +230,6 @@ main {
 
 }
 
-
-
 #nav-search input[text]{
     background-color: #2F2D2B;
     padding: 0;
@@ -230,18 +241,9 @@ main {
     }
 }
 
-
 #nav-search:hover {
     text-decoration: none;
 }
-#search-bar {
-    background-color: #2F2D2B;
-    width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
 
 #navigation-bar nav ul {
     list-style-type: none;
@@ -253,10 +255,7 @@ main {
     display: inline;
     padding: 0 6px;
     margin-right: 4px;
-
 }
-
-
 
 #navigation-bar .scroll-button {
     padding-left: 5px;
@@ -272,9 +271,6 @@ main {
     text-underline-offset: 2px;
     color: #cecece;
 }
-
-
-
 
 #mobile-nav {
    display: none;
@@ -297,7 +293,7 @@ main {
     padding: 0 16px;
     flex: 0 0 30%;
     font-weight: bolder;
-    border-right: 1px dashed #cecece;
+    border-right: 1px dashed rgba(206, 206, 206, 0.61);
     font-size: 14px;
 }
 
@@ -310,8 +306,6 @@ main {
     justify-content: space-between;
     font-size: 13px;
     color: #cecece;
-
-
 }
 
 
@@ -323,22 +317,10 @@ article {
     padding: 16px 24px;
     margin: 15px 0;
     border-radius: 6px;
-}
-
-/*TODO DA RIVEDERE */
-article img{
-    max-width: 100%;
-}
-/*Todo da rivedere */
-/* Articoli con immagine più grande */
-article.big-img-article > img {
-    flex: 2;
-}
-article div {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-right: 10px;
+    color: #F1EFED;
+    > * {
+        flex: 1;
+    }
 }
 
 article h1 {
@@ -346,13 +328,44 @@ article h1 {
     font-size: 36px;
     font-weight: bold;
     margin: 0 0;
+    font-family: 'Roboto', sans-serif;
+
 }
 article h2 {
     order: 1;
+    font-size: 16px;
+}
+article h1 h2 {
+    font-family: 'Roboto', sans-serif;
+
 }
 article p {
     order: 3;
     font-size: 16px;
+}
+article img{
+    max-width: 100%;
+}
+
+/* Articoli con immagine più grande */
+article.big-img-article {
+    > picture, img {
+        margin: 0 auto;
+        flex: 2;
+        width: 100%;
+        height: 100%;
+    }
+     p {
+        font-size: 20px;
+         flex:1;
+    }
+}
+
+article div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-right: 10px;
 }
 
 article footer {
@@ -389,14 +402,9 @@ article footer {
     display: inline-block;
     font-weight: bold;
 }
-
 .small-article header h2 {
-    font-size: 13px;
     display: inline-block;
-    font-weight: bold;
-    color: #cecece;
 }
-
 
 
 #articles-group {
@@ -404,37 +412,73 @@ article footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 16px 24px;
+    padding: 8px 24px;
     border-radius: 5px;
 }
 #articles-group > * {
     margin: 0 0;
     border-radius: 0;
-    border-bottom: 2px solid #cecece;
+    border-bottom: 1px dashed #cecece;
 }
-
 
 #sub-group {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    border-bottom: none;
+    justify-content: flex-start;
+    > div {
+        padding: 0;
+        border-right: 1px dashed #cecece;
+    }
 }
-#sub-group > article {
+#sub-group article {
     flex: 1 1 30%;
     display: flex;
     flex-direction: column-reverse;
-    padding:  10px;
+    align-self: flex-start;
     border-radius: 0;
-    border-right: 2px solid #cecece;
     h1 {
         font-size: 23px;
+    }
+    h2 {
+        font-size: 14px;
     }
 }
 
 
-#sub-group > article:last-child {
+#sub-group > div:last-child {
     border-right: none;
+}
+
+.centered-article {
+    display: flex;
+    flex-direction: column-reverse;
+
+    padding: 16px 24px;
+    margin: 15px 0;
+    border-radius: 6px;
+    color: #F1EFED;
+    > picture, img {
+        flex: 2;
+    }
+    > div {
+        align-self: center;
+        align-items: center;
+        margin: 0 20px;
+        padding: 10px 30px;
+        position: relative;
+        bottom: 70px;
+        background-color: #1F1E1C;
+        footer {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #cecece;
+        }
+    }
+
 }
 
 
@@ -442,7 +486,8 @@ article footer {
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
-    padding-top: 10px;
+    padding: 16px 24px;
+
     background-color: #1F1E1C;
 
 }
@@ -483,7 +528,7 @@ article footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: linear-gradient(to top, #1F1E1C, transparent), url("https://picsum.photos/168/265");
+    background-image: linear-gradient(to top, #1F1E1C, transparent), url("https://placehold.co/168x255");
 }
 
 #stories-content .scroll-container > div > img{
@@ -505,7 +550,6 @@ article footer {
     background-color: #1F1E1C;
     z-index: 5;
 
-
 }
 
 #stories-content .scroll-button-left {
@@ -519,6 +563,8 @@ article footer {
     position: absolute;
     right: 3%;
     top: 50%;
+
+    transform: translateY(-50%);
 }
 
 #stories-content .scroll-button:hover {
@@ -527,7 +573,6 @@ article footer {
 
 #stories-content .scroll-container  p{
     padding-left: 0;
-
     text-align: left;
     padding-bottom: 2px;
     font-weight: 900;
@@ -536,7 +581,6 @@ article footer {
 }
 
 
-/* Stile per la sezione galleria */
 #gallery{
     margin-top: 16px;
     padding: 16px 25px;
@@ -547,18 +591,15 @@ article footer {
     background-color: #1F1E1C;
     border-radius: 10px;
 }
-
 .gallery-item {
-
-    width: 960px; /* Puoi modificare la larghezza come desideri */
-    height: 540px; /* Puoi modificare l'altezza come desideri */
+    width: 960px;
+    height: 540px;
     background: linear-gradient(to top, #1F1E1C, transparent), url('https://picsum.photos/960/540') no-repeat center center;
     background-size: cover;
     text-decoration: none;
     margin: 10px;
 
 }
-
 .gallery-content {
     width: 100%;
     height: 100%;
@@ -576,7 +617,6 @@ article footer {
     }
 
 }
-
 .gallery-button {
     font-weight: bold;
     background-color: #D03D12;
@@ -588,16 +628,48 @@ article footer {
         display: none;
     }
 }
-
 .gallery-button:hover {
     background-color: rgba(208, 61, 18, 0.7);
 }
 
+#magazines {
+    background-color: black;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    h1 {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+    #magazines-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
 
-/* Transizioni fluide */
+    .scroll-container > div{
+        margin: 0 20px;
+        justify-self: stretch;
+        overflow-x: auto;
+        p {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
 
+    }
+    i {
+        padding: 0 10px;
 
+    }
 
+}
 
 #footer-title {
     display: flex;
@@ -606,7 +678,6 @@ article footer {
     align-items: center;
     background-color: #2F2D2B;
     padding: 16px 24px;
-    font-family: Arial, sans-serif;
 
     header {
     font-size: 17px;
@@ -618,10 +689,8 @@ article footer {
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-
-        align-items: flex-start;
-        overflow: auto;
+        justify-content: center;
+        flex-wrap: wrap ;
         padding: 16px 24px;
     }
 
@@ -635,6 +704,10 @@ article footer {
     a:hover {
         color: #F1EFED;
     }
+    i {
+        font-size: 20px;
+        margin: 0 6px;
+    }
 }
 
 * {
@@ -646,13 +719,22 @@ i {
 h1 {
     font-size: 36px;
     font-weight: bold;
-    font-family: Impact, fantasy;
 }
 
 #reg-button .fa-angle-right {
     font-weight: bold;
     font-size: smaller;
 }
+
+ h1:hover , h2:hover, .fa-bookmark:hover, #stories p:hover{
+     cursor: pointer;
+     color: rgba(187, 185, 183, 0.79);
+
+ }
+
+ p:hover {
+     cursor: pointer;
+ }
 
 
 @media screen and (max-width: 980px) {
@@ -661,13 +743,15 @@ h1 {
     }
 
 
-
-
+    picture {
+        width: 100%;
+    }
     #header-logo {
         font-size: 27px;
     }
-
-
+    #header-buttons *{
+        display: none;
+    }
 
     #navigation-bar {
         overflow-x: auto;
@@ -682,25 +766,42 @@ h1 {
         > i {
             font-size: 20px;
         }
-
     }
-
 
     #rn-content {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
+        > div {
+            flex: 0 0 340px;
+        }
     }
 
-    #rn-content > div {
-        flex: 0 0 340px;
-    }
-
-    article {
+    article .big-img-article {
         display: flex;
         flex-direction: column-reverse;
         padding: 10px;
+
     }
+
+    .fixed-image-article {
+        display: flex;
+        flex-direction: row;
+        padding: 16px 24px;
+        margin: 15px 0;
+        border-radius: 6px;
+        > picture, img {
+            flex: 2;
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            font-size: 20px;
+            flex: 1;
+        }
+    }
+
+
 
     .header-small #header-logo {
         font-size: 17px;
@@ -714,7 +815,7 @@ h1 {
         flex-direction: column;
     }
 
-    #sub-group > article {
+    #sub-group >  div{
         border-right: none;
     }
 
@@ -722,17 +823,6 @@ h1 {
         height: 212px;
         flex: 0 0 140px;
     }
-
-    main > * {
-        margin: 0 0;
-    }
-
-
-
-    #header-buttons {
-        display: none;
-    }
-
 
 }
 
@@ -746,6 +836,17 @@ h1 {
         height: 300px;
     }
 
+    .big-img-article p {
+        font-size: 10px;
+    }
+
+
+    article, .fixed-image-article {
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+
+
     #nav-menu, #nav-search {
         display: none;
     }
@@ -753,6 +854,13 @@ h1 {
         font-size: 16px;
     }
 
+    .centered-article{
+        div {
+            position: static;
+
+        }
+
+    }
     .gallery-button{
         padding: 2px;
         i {
@@ -767,14 +875,12 @@ h1 {
 
 }
 
-/* Cellulari */
+/* schermi piccoli */
 @media screen and (max-width: 550px){
     .main-style {
-        width: 100%;
+        width: 100vw;
     }
-    * h1 {
-        font-size: 24px;
-    }
+
 
     main > * {
         margin: 7px 0;
@@ -784,30 +890,37 @@ h1 {
         margin: 5px 0;
         padding: 6px 9px;
         border-radius: 0;
+        h1 {
+            font-size: 24px;
+        }
     }
 
 
-    .big-img-article{
+    .big-img-article, .fixed-image-article {
         padding: 0 0;
         >div {
             padding: 6px 9px;
         }
-        img {
+        picture {
             flex: 1;
             width: 100vw;
         }
     }
 
+    .small-article h1{
+        font-size: 18px;
+    }
+
     .small-article img {
-        width: 45px;
-        object-fit: cover;
+        width: 100px;
     }
 
     #footer-title nav {
+        justify-content: flex-start;
         flex-wrap: wrap;
         padding: 8px 0;
         > a {
-            margin: 3px 0;
+            margin: 6px 8px;
         }
     }
 
