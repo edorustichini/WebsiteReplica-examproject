@@ -65,7 +65,7 @@
                 <li><a href="#"><span>Link 20</span></a></li>
             </ul>
         </nav>
-        <i  class='scroll-button scroll-button-right fas fa-angle-right'></i>
+        <i  class='scroll-button scroll-button-right fas fa-angle-right' onclick="openSearchBar"></i>
         <!--<div id="nav-search">
             <input id="search-bar" type="text" name="search" placeholder="Cerca..">
             <i onclick="openSeacrh()" class="fas fa-search"></i>
@@ -402,6 +402,9 @@
     </section>
 
 
+
+
+
     <!-- GALLERIA -->
     <section id="gallery" class="main-style gallery-section">
         <a href="#" class="gallery-item">
@@ -415,6 +418,30 @@
         </a>
     </section>
 
+    <!-- Articoli più letti-->
+    <section id="most-read" class="main-style">
+        <header>
+            <h1>Articoli più letti</h1>
+        </header>
+        <div >
+            <div>
+                <span>1</span>
+                <p>Sed iaculis lacinia nunc sit amet suscipit. Suspendisse cursus urna eu eros porta, sed blandit odio consectetur</p>
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div>
+                <span>2</span>
+                <p>Phasellus euismod leo nunc. Etiam interdum arcu mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+            <div>
+                <span>3</span>
+                <p>Phasellus pharetra leo sed condimentum iaculis.</p>
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+        </div>
+
+    </section>
 
 
     <!-- Sezione Stories -->
@@ -573,6 +600,9 @@
     document.getElementById('rn-content').querySelectorAll('div').forEach(div => {
         setTitle(div, 'p');
     });
+    document.getElementById('stories-content').querySelectorAll('.scroll-container > div').forEach(div => {
+        setTitle(div, 'p');
+    });
 
 
 </script>
@@ -601,14 +631,14 @@
 
         scrollButtonsRight.forEach((button, index) => {
             button.addEventListener('click', function() {
-                scrollContainers[index].scrollLeft += 50;
+                scrollContainers[index].scrollLeft += scrollContainers[index].clientWidth;
             });
         });
 
         scrollButtonsLeft.forEach((button, index) => {
             button.style.display = 'none';
             button.addEventListener('click', function() {
-                scrollContainers[index].scrollLeft -= 50;
+                scrollContainers[index].scrollLeft -=scrollContainers[index].clientWidth;
             });
             scrollContainers[index].addEventListener('scroll', function () {
                 if (window.innerWidth > 500){

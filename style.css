@@ -47,6 +47,7 @@ body {
     justify-content: space-between;
     text-align: center;
     overflow-x: auto;
+    scroll-behavior: smooth;
 }
 .scroll-container  * {
     flex:0 0 auto;
@@ -437,10 +438,10 @@ article footer {
     align-self: flex-start;
     border-radius: 0;
     h1 {
-        font-size: 23px;
+        font-size: 20px;
     }
     h2 {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -632,6 +633,56 @@ article footer {
     background-color: rgba(208, 61, 18, 0.7);
 }
 
+#most-read {
+    background-color: #1F1E1C;
+    padding: 16px 24px;
+    margin: 15px auto;
+
+    header {
+        h1 {
+            font-size: 20px;
+            color: #ac3111;
+        }
+    }
+    .fa-bookmark{
+        margin:0;
+        padding: 0 10px;
+    }
+    > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       > div{
+           padding: 0 10px;
+           flex: 1 30%;
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-start;
+           align-items: center;
+           border-right: 1px dashed #cecece;
+           span {
+               font-size: 25px;
+               padding-right: 10px;
+               color: #BBB9B7;
+           }
+           p {
+               flex: 2;
+               justify-self: center;
+               font-size: 16px;
+               font-weight: bold;
+               color: white;
+           }
+       }
+        p:hover {
+            cursor: pointer;
+            color: rgba(187, 185, 183, 0.79);
+        }
+        div:last-child {
+            border-right: none;
+        }
+    }
+}
+
 #magazines {
     background-color: black;
     padding: 16px 24px;
@@ -665,6 +716,7 @@ article footer {
 
     }
     i {
+        background-color: transparent;
         padding: 0 10px;
 
     }
@@ -810,6 +862,22 @@ h1 {
         display: none;
     }
 
+    #most-read > div {
+
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        > div {
+            border-right: none;
+        }
+        span {
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
 
 
     #sub-group >  div{
@@ -938,6 +1006,21 @@ h1 {
 
     body * {
         border-radius: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 280px){
+    .small-article header{
+        flex-direction: column-reverse;
+        h1 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
     }
 
 }
