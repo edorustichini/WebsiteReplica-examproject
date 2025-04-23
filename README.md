@@ -3,4 +3,4 @@ Elaborato per parte di front-end del corso di "Progettazione e Produzione Multim
 
 Sito da copiare: https://www.spiegel.de/
 
-Elaborato: https://edorustichini.github.io/ER-PPM-frontend.io/
+Elaborato: [WebsiteReplica](https://edorustichini.github.io/WebsiteReplica-examproject/)
