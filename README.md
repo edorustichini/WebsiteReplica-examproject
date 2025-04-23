@@ -11,4 +11,4 @@ The objective of this project is to recreate the design of the homepage of Spieg
 
 ## Links
 - Original Website: https://www.spiegel.de/
-- My replica: https://edorustichini.github.io/WebsiteReplica-examproject/
+- My replica: https://edorustichini.github.io/WebsiteReplica/
